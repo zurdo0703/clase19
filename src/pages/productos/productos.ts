@@ -1,22 +1,23 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-import { ProductosPage } from '../productos/productos';
+import { HomePage } from '../home/home';
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+  selector: 'page-productos',
+  templateUrl: 'productos.html'
 })
-export class HomePage {
-content = "";
+export class ProductosPage {
+
   constructor(public navCtrl: NavController) {
 
   }
+
   openPage(page) {
   	console.log('hola',page);
   	switch (page) {
-  		case "productos":
-  			this.navCtrl.push(ProductosPage);
+  		case "home":
+  			this.navCtrl.push(HomePage);
   			break;
   			
   	}
